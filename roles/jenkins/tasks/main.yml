@@ -1,0 +1,7 @@
+- name: Create a jenkins job
+  community.general.jenkins_job:
+    config: "{{ lookup('file', 'templates/s-pipeline.xml') }}"
+    name: test
+    password: Cisco@410
+    url: http://http://172.31.4.221:8080/
+    user: admin
