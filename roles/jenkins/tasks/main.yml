@@ -1,7 +1,17 @@
+- name: create a folder
+  community.general.jenkins_job:
+    config: "{{ lookup('file', 'templates/folder.xml') }}"
+    name: {{item}}
+    password: Cisco@410
+    url: http://172.31.7.106:8080/
+    user: admin
+    loop:
+      - CI-Pipelines
+
 - name: Create a jenkins job
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/s-pipeline.xml') }}"
-    name: test
+    name: "CI-Pipelines/test"
     password: Cisco@410
     url: http://172.31.7.106:8080/
     user: admin
