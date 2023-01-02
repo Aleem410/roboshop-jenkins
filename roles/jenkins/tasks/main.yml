@@ -3,5 +3,5 @@
     config: "{{ lookup('file', 'templates/s-pipeline.xml') }}"
     name: test
     token: 114baa9b42ce9bcf2b03eb5b13c77e30df
-    url: http://http://172.31.4.221:8080/
+    url: http://172.31.4.221:8080/
     user: admin
