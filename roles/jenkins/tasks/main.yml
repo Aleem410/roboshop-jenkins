@@ -8,7 +8,7 @@
   loop:
     - CI-Pipelines
 
-- name: Include pipeline tasks
+- name: Include multi branch pipeline tasks
   ansible.builtin.include_tasks: m-pipelines.yml
   vars:
     COMPONENT: "{{item}}"
@@ -20,3 +20,9 @@
     - shipping
     - payment
 
+- name: Include single branch pipeline tasks
+  ansible.builtin.include_tasks: s-pipelines.yml
+  vars:
+    COMPONENT: "{{item}}"
+  loop:
+   - roboshop-infra
