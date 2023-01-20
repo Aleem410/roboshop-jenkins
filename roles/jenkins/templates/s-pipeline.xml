@@ -25,5 +25,6 @@
         <lightweight>true</lightweight>
     </definition>
     <triggers/>
+    <authToken>test</authToken>
     <disabled>false</disabled>
 </flow-definition>
